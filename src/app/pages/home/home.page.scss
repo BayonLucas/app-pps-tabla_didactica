@@ -1,0 +1,46 @@
+ion-grid {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+  width: 100%;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.full-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ion-content{
+  --background: #ddc77a;
+}
+
+.icon-img{
+  background-color: #9e9821;
+}
+
+ion-img.img-responsive {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+}
+@media (orientation: landscape) {
+  ion-img.img-responsive {
+    max-width: 73%;
+  }
+}
+
+ion-item {
+  background-color: #1e1e1e!important;
+}

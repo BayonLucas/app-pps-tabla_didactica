@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="full-height"> 
+      <ion-col sizeSm="4" sizeXs="6" *ngFor="let item; let i = index of selectedImages">
+        <ion-item  class="boton ion-justify-content-center" (click)="play(i)">
+          <ion-img [src]="item" class="img-responsive"></ion-img>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" >
+    <ion-fab-button>
+      <ion-img class="icon-img" src="../../../assets/icon/ion-fabs/idiomas.png" name="language"></ion-img> 
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/banderas/argentina.png" (click)="seteatIdioma('español')"></ion-img></ion-fab-button>
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/banderas/reino-unido.png" (click)="seteatIdioma('ingles')"></ion-img></ion-fab-button>
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/banderas/portugal.png" (click)="seteatIdioma('portugues')"></ion-img></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-fab-button>
+      <ion-img class="icon-img" src="../../../assets/icon/ion-fabs/temas-importantes.png" name="theme"></ion-img>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/temas/paleta-de-color.png" (click)="seteatTematica('colores')"></ion-img></ion-fab-button>
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/temas/bloques-numericos.png" (click)="seteatTematica('numeros')"></ion-img></ion-fab-button>
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/temas/camaleon.png" (click)="seteatTematica('animales')"></ion-img></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed" >
+    <ion-fab-button>
+      <ion-img class="icon-img" src="../../../assets/icon/ion-fabs/cerrar-sesion.png" name="logout"></ion-img>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-img class="icon-img" src="../../../assets/icon/ion-fabs/boton-de-encendido.png" (click)="cerrarSesion()"></ion-img></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+</ion-content>
